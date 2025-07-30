@@ -1,23 +1,23 @@
 {
     "name": "node-ci-cd-app",
     "version": "1.0.0",
-    "description": "A simple Node.js CI/CD app",
+    "description": "Simple Node.js app for CI/CD with Jenkins",
     "main": "app.js",
     "scripts": {
       "start": "node app.js",
-      "test": "mocha",
-      "lint": "eslint ."
+      "lint": "eslint .",
+      "test": "mocha"
     },
     "author": "Your Name",
     "license": "ISC",
     "dependencies": {
-      "express": "^4.18.2"
+      "express": "^4.18.4"
     },
     "devDependencies": {
-      "chai": "^4.3.7",
-      "mocha": "^10.2.0",
-      "chai-http": "^4.3.0",
-      "eslint": "^8.56.0"
+      "chai": "^4.4.1",
+      "chai-http": "^4.4.0",
+      "eslint": "^8.57.1",
+      "mocha": "^10.2.0"
     }
   }
   

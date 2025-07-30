@@ -1,11 +1,10 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const app = require('../app'); // adjust if app.js is elsewhere
+const app = require('../app');
 
-chai.use(chaiHttp);
 const expect = chai.expect;
+chai.use(chaiHttp);
 
-// Example test
 describe('GET /', () => {
   it('should return 200', (done) => {
     chai.request(app)
