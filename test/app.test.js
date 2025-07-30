@@ -5,8 +5,8 @@ const app = require('../app');
 chai.use(chaiHttp);
 chai.should();
 
-describe("App", () => {
-  it("should return welcome message", (done) => {
+describe('App', () => {
+  it('should return welcome message', (done) => {
     chai.request(app)
         .get('/')
         .end((err, res) => {
