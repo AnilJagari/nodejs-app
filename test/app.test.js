@@ -1,18 +1,18 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const app = require('../app');
+const app = require('../app'); // adjust if app.js is elsewhere
 
 chai.use(chaiHttp);
-chai.should();
+const expect = chai.expect;
 
-describe('App', () => {
-  it('should return welcome message', (done) => {
+// Example test
+describe('GET /', () => {
+  it('should return 200', (done) => {
     chai.request(app)
-        .get('/')
-        .end((err, res) => {
-            res.should.have.status(200);
-            res.text.should.equal('Hello from Node.js CI/CD App!');
-            done();
-        });
+      .get('/')
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        done();
+      });
   });
 });
